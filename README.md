@@ -1,1 +1,12 @@
 # Aplicación Cliente/Servidor sobre sockets TCP en Java
+Resolución de la práctica 2 sobre desarrollo de aplicaciones C/S sencillas de la asignatura Fundamentos de Redes del Grado en Ingeniería Informática de la Universidad de Granada. 
+
+Autores:
+* Alonso Bueno Herrero
+* Manuel Castellón Reguero
+
+Calificación de la práctica: 10/10
+
+Notas sobre la "infraestructura" que hay tras la aplicación: 
+* Sobre la "base de datos", se ha simulado mediante una clase Java, para simplificar el proyecto, debido a que el objetivo no era implementar una aplicación de gestión de base de datos. Se dan más detalles en la memoria de la práctica en PDF de este repositorio.
+* Sobre la interfaz gráfica, se aconseja consultar la memoria de la práctica para utilizarla, ya que solicita la fecha en la que se quiera solicitar la cita, y en dicha memoria hay varias fechas con las que se pueden hacer las pruebas. De cualquier forma, en el fichero `BaseDatos.java` (carpeta `Servidor`)
