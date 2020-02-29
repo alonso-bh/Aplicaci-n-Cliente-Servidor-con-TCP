@@ -48,8 +48,6 @@ public class SolicitarCita extends javax.swing.JFrame {
         menuMeses = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        verCitasLibres = new javax.swing.JButton();
 
         errorFormatoDNI.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -121,27 +119,12 @@ public class SolicitarCita extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel9.setText("2. Datos sobre la cita a solicitar:");
 
-        jLabel10.setText("Puede consultar las citas disponibles seleccionando \"VER CITAS DISPONIBLES\"");
-
-        verCitasLibres.setText("VER CITAS DISPONIBLES");
-        verCitasLibres.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                verCitasLibresActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel10))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(verCitasLibres, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,7 +143,7 @@ public class SolicitarCita extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(180, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -186,11 +169,7 @@ public class SolicitarCita extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addGap(21, 21, 21)
-                .addComponent(jLabel10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(verCitasLibres, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel8)
@@ -272,11 +251,6 @@ public class SolicitarCita extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaDiaActionPerformed
 
-    private void verCitasLibresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verCitasLibresActionPerformed
-        // TODO add your handling code here:
-        System.out.println("Quieres ver las citas disponibles ...");
-    }//GEN-LAST:event_verCitasLibresActionPerformed
-
     
     private boolean comprobarCamposIntroducidos ()
     {
@@ -338,7 +312,6 @@ public class SolicitarCita extends javax.swing.JFrame {
     private javax.swing.JTextField cajaDia;
     private javax.swing.JDialog errorFormatoDNI;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -349,6 +322,5 @@ public class SolicitarCita extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JComboBox<String> menuEspecialidades;
     private javax.swing.JComboBox<String> menuMeses;
-    private javax.swing.JButton verCitasLibres;
     // End of variables declaration//GEN-END:variables
 }
