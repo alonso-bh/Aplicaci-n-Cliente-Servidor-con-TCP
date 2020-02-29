@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author alonso
+ * @author alonso, manuel 
  */
 public class AnularCita extends javax.swing.JFrame {
     ClienteCitasMedicasTCP cliente = new ClienteCitasMedicasTCP(); 
