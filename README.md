@@ -8,5 +8,5 @@ Autores:
 Calificación de la práctica: 10/10
 
 Notas sobre la "infraestructura" que hay tras la aplicación: 
-* Sobre la "base de datos", se ha simulado mediante una clase Java, para simplificar el proyecto, debido a que el objetivo no era implementar una aplicación de gestión de base de datos. Se dan más detalles en la memoria de la práctica en PDF de este repositorio.
-* Sobre la interfaz gráfica, se aconseja consultar la memoria de la práctica para utilizarla, ya que solicita la fecha en la que se quiera solicitar la cita, y en dicha memoria hay varias fechas con las que se pueden hacer las pruebas. De cualquier forma, en el fichero `BaseDatos.java` (carpeta `Servidor`)
+* Sobre la **"base de datos"**, se ha simulado mediante una clase Java, para simplificar el proyecto, debido a que el objetivo no era implementar una aplicación de gestión de base de datos. Se dan más detalles en la memoria de la práctica en PDF de este repositorio.
+* Sobre el uso de la **interfaz gráfica**, se aconseja consultar la memoria de la práctica, ya que pide, tanto para solicitar una cita como para anularla, la fecha en cuestión, y no se pueden consultar las fechas disponibles desde dicha interfaz, por lo que en dicha memoria hay varias fechas con las que se pueden hacer las pruebas. De cualquier forma, en el fichero `BaseDatos.java` (carpeta `Servidor`) están (como es lógico) todas las fechas que se han registrado en la "base de datos" para hacer las pruebas. 
