@@ -17,7 +17,7 @@ public class NewJFrame extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     public NewJFrame() {
-        this.setTitle("SERVICIO DE CITA PREVIA DEL CENTRO DE SALUD DE PEDRO RUIZ");
+        this.setTitle("Servicio de cita previa");
         //this.setIconImage(new ImageIcon (getClass().getResource("/images/muestra.JPG")).getImage() );
         initComponents();
     }
