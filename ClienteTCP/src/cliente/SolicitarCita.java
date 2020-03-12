@@ -5,6 +5,7 @@
  */
 package cliente;
 
+import java.util.Calendar;
 import javax.swing.JOptionPane;
 
 /**
@@ -48,6 +49,7 @@ public class SolicitarCita extends javax.swing.JFrame {
         menuMeses = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jCalen = new com.toedter.calendar.JDateChooser();
 
         errorFormatoDNI.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -124,26 +126,27 @@ public class SolicitarCita extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2))
-                                .addGap(99, 99, 99)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cajaDia)
-                                    .addComponent(cajaDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel8)))
+                            .addComponent(jLabel8)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addContainerGap(180, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(99, 99, 99)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(180, Short.MAX_VALUE))
+                            .addComponent(cajaDia)
+                            .addComponent(cajaDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jCalen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -169,15 +172,20 @@ public class SolicitarCita extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cajaDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cajaDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jCalen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cajaDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -230,6 +238,15 @@ public class SolicitarCita extends javax.swing.JFrame {
             System.out.println("-------> "+ cad);
 
             System.out.println("Soy el cliente " + cliente.getId() + " y ya me han llamado !!");
+            
+            int anio = jCalen.getCalendar().get(Calendar.YEAR);
+            System.out.println("AÑITOOOOOOOOOOOO= " + anio);
+            int mes = jCalen.getCalendar().get(Calendar.MONTH);
+            int day = jCalen.getCalendar().get(Calendar.DAY_OF_MONTH);
+             System.out.println("d/m/a = " + anio+ "-"+mes+"-"+ day);
+            
+            // ------------------------------------------------------------------------------
+            // --------------- MANDAR AL CLIENTE LA CADENA DE LA SOLICITUD
             cliente.procesar(cad);
             
             System.out.println("Transacción final...");
@@ -267,8 +284,14 @@ public class SolicitarCita extends javax.swing.JFrame {
         }
         
         if (cajaDia.getText().length() != 0){
-            if ( Integer.parseInt(cajaDia.getText()) <= 1 && Integer.parseInt(cajaDia.getText()) <= 31  )
-                errorDia = true; 
+            try{ 
+                if ( Integer.parseInt(cajaDia.getText()) <= 1 && Integer.parseInt(cajaDia.getText()) <= 31  )
+                    errorDia = true; 
+            } catch (Exception e){
+                System.out.println("FORMATO DE DÍA INCORRECTO");
+                errorDia=true; 
+            }
+                    
         }
         else errorDia = true; 
 
@@ -280,11 +303,16 @@ public class SolicitarCita extends javax.swing.JFrame {
         
         if (cajaAnio.getText().length() != 0)
         {
-            if ( Integer.parseInt(cajaAnio.getText()) < 2000 || 
-                 Integer.parseInt(cajaAnio.getText()) > 2999  )
-            {
-                errorAnio = true;
-                System.out.println("FECHA en rango INcorrecto !!!!!");
+            try{ 
+                if ( Integer.parseInt(cajaAnio.getText()) < 2000 || 
+                     Integer.parseInt(cajaAnio.getText()) > 2999  )
+                {
+                    errorAnio = true;
+                    System.out.println("FECHA en rango INcorrecto !!!!!");
+                }
+            }
+            catch (Exception e) {
+                errorAnio=true; 
             }
         }
         else errorAnio = true; 
@@ -294,7 +322,7 @@ public class SolicitarCita extends javax.swing.JFrame {
         // MOSTRAR CUADRO DE DIALOGO
         if (errorDNI || errorDia || errorMes || errorAnio) 
         {
-            JOptionPane.showMessageDialog(this, "Algo has introducido mal...", "Alerta sobre datos incorrectos", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Algo has introducido mal. Revise los datos introducido e inténtelo de nuevo.", "Alerta sobre datos incorrectos", JOptionPane.ERROR_MESSAGE);
         }
         
         if ( !errorDNI && !errorDia && !errorMes && !errorAnio )
@@ -311,6 +339,7 @@ public class SolicitarCita extends javax.swing.JFrame {
     private javax.swing.JTextField cajaDNI;
     private javax.swing.JTextField cajaDia;
     private javax.swing.JDialog errorFormatoDNI;
+    private com.toedter.calendar.JDateChooser jCalen;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
