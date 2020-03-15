@@ -36,20 +36,15 @@ public class SolicitarCita extends javax.swing.JFrame {
         errorFormatoDNI = new javax.swing.JDialog();
         cajaDNI = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        cajaDia = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        cajaAnio = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         menuEspecialidades = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         botonMandarSolicitud = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        menuMeses = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jCalen = new com.toedter.calendar.JDateChooser();
+        jLabel10 = new javax.swing.JLabel();
 
         errorFormatoDNI.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -79,20 +74,8 @@ public class SolicitarCita extends javax.swing.JFrame {
 
         jLabel1.setText("Introduzca su DNI:");
 
-        cajaDia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cajaDiaActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("Introduzca el día:");
-
         jLabel3.setFont(new java.awt.Font("Tahoma", 2, 16)); // NOI18N
         jLabel3.setText("Este asistente le ayudará a solicitar una cita rápidamente. ");
-
-        jLabel4.setText("Seleccione el mes:");
-
-        jLabel5.setText("Introduzca el año:");
 
         menuEspecialidades.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TRAUMATOLOGIA", "CARDIOLOGIA", "MEDICINA GENERAL", "NEUROLOGIA" }));
         menuEspecialidades.addActionListener(new java.awt.event.ActionListener() {
@@ -113,13 +96,13 @@ public class SolicitarCita extends javax.swing.JFrame {
 
         jLabel7.setText("Rellene los siguiente campos, después seleccione \"SOLICITAR CITA\"");
 
-        menuMeses.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE" }));
-
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel8.setText("1. Datos del paciente:");
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel9.setText("2. Datos sobre la cita a solicitar:");
+
+        jLabel10.setText("Seleccione la fecha de su cita:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -134,82 +117,59 @@ public class SolicitarCita extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addContainerGap(180, Short.MAX_VALUE))
+                        .addContainerGap(190, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
+                        .addComponent(jLabel1)
                         .addGap(99, 99, 99)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cajaDia)
-                            .addComponent(cajaDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jCalen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39))))
+                        .addComponent(cajaDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel9))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel10))
                         .addGap(65, 65, 65)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(menuEspecialidades, 0, 1, Short.MAX_VALUE)
-                            .addComponent(cajaAnio)
-                            .addComponent(menuMeses, 0, 130, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonMandarSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(menuEspecialidades, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCalen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel9)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(botonMandarSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(205, 205, 205))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(26, 26, 26)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cajaDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jCalen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cajaDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel9)
-                        .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(menuMeses, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cajaAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(menuEspecialidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))
-                        .addGap(52, 52, 52))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botonMandarSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(51, 51, 51))))
+                    .addComponent(cajaDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(29, 29, 29)
+                .addComponent(jLabel9)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(menuEspecialidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jCalen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10))
+                .addGap(46, 46, 46)
+                .addComponent(botonMandarSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59))
         );
 
         pack();
@@ -222,12 +182,15 @@ public class SolicitarCita extends javax.swing.JFrame {
     // mandar solicitud cliente
     private void botonMandarSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMandarSolicitudActionPerformed
         // hacer comprobaciones sobre los valores introducidos
-        boolean todo_ok = comprobarCamposIntroducidos();
+        boolean todo_ok = true;// comprobarCamposIntroducidos();
         
         if (todo_ok){ // formar la cadena de String para mandarla al servidor
             String cad = new String();
-            cad += cajaDia.getText()  + "/" + (menuMeses.getSelectedIndex()+1) + "/" + cajaAnio.getText()+ "#";
-    //buferEnvio = buferEnvio + cadDia + "/" + cadMes + "/" + cadAnio + "#";
+
+            cad += jCalen.getCalendar().get(Calendar.DAY_OF_MONTH) + "/"
+                +  (jCalen.getCalendar().get(Calendar.MONTH)+1) + "/" 
+                +  jCalen.getCalendar().get(Calendar.YEAR) + "#" ; 
+//            cad += cajaDia.getText()  + "/" + (menuMeses.getSelectedIndex()+1) + "/" + cajaAnio.getText()+ "#";
 
             cad += menuEspecialidades.getSelectedItem() + "#" ; 
 
@@ -239,11 +202,7 @@ public class SolicitarCita extends javax.swing.JFrame {
 
             System.out.println("Soy el cliente " + cliente.getId() + " y ya me han llamado !!");
             
-            int anio = jCalen.getCalendar().get(Calendar.YEAR);
-            System.out.println("AÑITOOOOOOOOOOOO= " + anio);
-            int mes = jCalen.getCalendar().get(Calendar.MONTH);
-            int day = jCalen.getCalendar().get(Calendar.DAY_OF_MONTH);
-             System.out.println("d/m/a = " + anio+ "-"+mes+"-"+ day);
+           
             
             // ------------------------------------------------------------------------------
             // --------------- MANDAR AL CLIENTE LA CADENA DE LA SOLICITUD
@@ -264,10 +223,6 @@ public class SolicitarCita extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_menuEspecialidadesActionPerformed
 
-    private void cajaDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajaDiaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cajaDiaActionPerformed
-
     
     private boolean comprobarCamposIntroducidos ()
     {
@@ -283,39 +238,6 @@ public class SolicitarCita extends javax.swing.JFrame {
             errorDNI = true;
         }
         
-        if (cajaDia.getText().length() != 0){
-            try{ 
-                if ( Integer.parseInt(cajaDia.getText()) <= 1 && Integer.parseInt(cajaDia.getText()) <= 31  )
-                    errorDia = true; 
-            } catch (Exception e){
-                System.out.println("FORMATO DE DÍA INCORRECTO");
-                errorDia=true; 
-            }
-                    
-        }
-        else errorDia = true; 
-
-        int mes = menuMeses.getSelectedIndex()+1;
-        System.out.println(mes);
-        
-        if (mes < 1 || mes > 12)
-            errorMes = true; 
-        
-        if (cajaAnio.getText().length() != 0)
-        {
-            try{ 
-                if ( Integer.parseInt(cajaAnio.getText()) < 2000 || 
-                     Integer.parseInt(cajaAnio.getText()) > 2999  )
-                {
-                    errorAnio = true;
-                    System.out.println("FECHA en rango INcorrecto !!!!!");
-                }
-            }
-            catch (Exception e) {
-                errorAnio=true; 
-            }
-        }
-        else errorAnio = true; 
         
         System.out.println(errorDNI + "  "+ errorDia + " " + errorMes + "  " + errorAnio); 
         
@@ -327,7 +249,8 @@ public class SolicitarCita extends javax.swing.JFrame {
         
         if ( !errorDNI && !errorDia && !errorMes && !errorAnio )
             return true;
-        else return false; 
+        else 
+            return false; 
     
     } // fin método comprobaciones
     
@@ -335,21 +258,16 @@ public class SolicitarCita extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonMandarSolicitud;
-    private javax.swing.JTextField cajaAnio;
     private javax.swing.JTextField cajaDNI;
-    private javax.swing.JTextField cajaDia;
     private javax.swing.JDialog errorFormatoDNI;
     private com.toedter.calendar.JDateChooser jCalen;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JComboBox<String> menuEspecialidades;
-    private javax.swing.JComboBox<String> menuMeses;
     // End of variables declaration//GEN-END:variables
 }
