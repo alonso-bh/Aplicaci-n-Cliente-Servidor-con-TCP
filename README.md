@@ -10,11 +10,14 @@ Calificación de la práctica: 10/10
 
 ## ¿Cómo probar la aplicación? 
 Hay que seguir unos sencillos pasos:
+
 1. En primer lugar, descargar el repositorio,
 2. En segundo lugar, vamos a la carpeta (proyecto Netbeans) llamada `ServidorCitasMedicasTCP`, vamos a la carpeta `dist`, y ejecutamos el archivo `.jar` que hay. Este archivo es el servidor, que ha de arrancarse lo primero de todo, y se queda en segundo plano esperando que le lleguen peticiones.
 3. Vamos a arrancar el cliente. Para ello, y de forma análoga a lo que hicimos con el servidor, vamos a la carpeta del repositorio llamada `ClienteTCP`, entramos en el directorio `dist` y ejecutamos el fichero `.jar` que es el programa cliente con la interfaz gráfica incluida. 
-4. Ya podemos hacer las pruebas que queramos. 
+4. Lea las [Notas sobre la infraestructura de la aplicación](#comments)
+5. Ya podemos hacer las pruebas que queramos. 
 
+<a name="comments" ></a>
 ## Notas sobre la "infraestructura" que hay tras la aplicación
 
 * Sobre la **"base de datos"**, se ha simulado mediante una clase Java, para simplificar el proyecto, debido a que el objetivo no era implementar una aplicación de gestión de base de datos. Se dan más detalles en la memoria de la práctica en PDF de este repositorio.
