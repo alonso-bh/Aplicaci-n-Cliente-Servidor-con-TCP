@@ -98,71 +98,77 @@ public class ProcesadorCitasMedicas extends Thread
     private String  citasDo (String informacion)
     { 
 
-            // 1.Descomponermos la información
-            String info = informacion;
-            String[] partes = info.split("#");
-            String fecha = partes[0];
-            String especialidad = partes[1];
-            String DNI = partes[2];
-            String opcionMenu = partes[3]; 
+        // 1.Descomponermos la información
+        String info = informacion;
+        String[] partes = info.split("#");
+        String fecha = partes[0];
+        String especialidad = partes[1];
+        String DNI = partes[2];
+        String opcionMenu = partes[3]; 
 
-            // 2. Tratamiento de las citas
-            String horaAsignada;
+        // 2. Tratamiento de las citas
+        String horaAsignada;
+ 
+        if (almacenDatos.compruebaDNI(DNI)){	
 
-            if (almacenDatos.compruebaDNI(DNI)){	
+            if ("1".equals(opcionMenu))
+            {
+                System.out.println("OPCION 1"); 
 
-                    if ("1".equals(opcionMenu))
-                    {
-                            System.out.println("OPCION 1"); 
+                if (almacenDatos.comprobarEspecialidad(especialidad)){	 
 
-                            if (almacenDatos.comprobarEspecialidad(especialidad)){	 
+                    if(almacenDatos.disponibilidadFecha(fecha, especialidad)){ 
 
-                                    if(almacenDatos.disponibilidadFecha(fecha, especialidad)){ 
+                            // 4. Comprobamos la hora
+                            horaAsignada = almacenDatos.obtenerHoraCita(fecha, especialidad);
 
-                                            // 4. Comprobamos la hora
-                                            horaAsignada = almacenDatos.obtenerHoraCita(fecha, especialidad);
+                            return ("Su cita es a las: " + horaAsignada); 
+                    } 
+                    else{
+                            return ("No hay citas disponibles en esta fecha.");
 
-                                            return ("Su cita es a las: " + horaAsignada); 
-                                    } 
-                                    else{
-                                            return ("No hay citas disponibles en esta fecha.");
+                    } 
 
-                                    } 
+                } // if (especialidad correcta)
+                else{
+                    return ("Para la especialidad " + especialidad + " no hay citas disponibles.");
+                }
+            } // fin opcion de pedir cita
 
-                            } // if (especialidad correcta)
-                            else{
-                                    return ("Para la especialidad " + especialidad + " no hay citas disponibles.");
-                            }
-                    } // fin opcion de pedir cita
+            else if ("2".equals (opcionMenu)  )
+            {
+                System.out.println("OPCION 2"); 
 
-                    else if ("2".equals (opcionMenu)  )
-                    {
-                            System.out.println("OPCION 2"); 
+                String horaAInvalidar = new String(); 
 
-                            String horaAInvalidar = new String(); 
+                horaAInvalidar = partes[4]; 
 
-                            horaAInvalidar = partes[4]; 
-
-                            if (almacenDatos.comprobarEspecialidad(especialidad) )
-                            {
-                                    if (almacenDatos.anularHora(fecha, especialidad, horaAInvalidar)){
-                                            return ("Hora anulada");
-                                    }
-                                    else{
-                                            return ("No se ha podido anular esa cita (hora)"); 
-                                    }
-
-                            }
-                            else 
-                            {
-                                    return ("La especialidad introducida" + especialidad + " no es correcta.");					
-                            }
+                if (almacenDatos.comprobarEspecialidad(especialidad) )
+                {
+                    if (almacenDatos.anularHora(fecha, especialidad, horaAInvalidar)){
+                            return ("Hora anulada");
+                    }
+                    else{
+                            return ("No se ha podido anular esa cita (hora)"); 
                     }
 
+                }
+                else 
+                {
+                        return ("La especialidad introducida" + especialidad + " no es correcta.");					
+                }
             }
-            //else{
-                    return ("El DNI introducido no se encuentra en la base de datos.");
-            //}
+            
+            else if ("3".equals(opcionMenu))    // quieres ver las citas actuales 
+            {
+                
+            }
+            
+
+        }
+        //else{
+                return ("El DNI introducido no se encuentra en la base de datos.");
+        //}
 
     }
 

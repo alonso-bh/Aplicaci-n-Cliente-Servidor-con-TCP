@@ -59,7 +59,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Interfaz de gestión de citas médicas");
+        jLabel1.setText("INTERFAZ DE GESTIÓN DE CITAS MÉDICAS");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,7 +78,7 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addComponent(jButton1)
                         .addGap(23, 23, 23))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1)
                         .addGap(61, 61, 61))))
         );
         layout.setVerticalGroup(

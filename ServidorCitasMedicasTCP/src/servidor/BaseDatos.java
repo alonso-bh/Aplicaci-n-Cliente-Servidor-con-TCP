@@ -224,49 +224,49 @@ public class BaseDatos
         //Primera especialidad 
         diasDisponibles = new String[NUM_ESPECIALIDADES][NUM_FECHAS_POR_ESPECIALIDAD];
 
-        diasDisponibles[0][0] = "15/01/2019";
-        diasDisponibles[0][1] = "15/05/2019";
+        diasDisponibles[0][0] = "15/1/2019";
+        diasDisponibles[0][1] = "15/5/2019";
         diasDisponibles[0][2] = "20/10/2020";
         diasDisponibles[0][3] = "12/12/2019";
-        diasDisponibles[0][4] = "04/02/2020";
+        diasDisponibles[0][4] = "04/2/2020";
         diasDisponibles[0][5] = "18/11/2019";
-        diasDisponibles[0][6] = "19/09/2020";
-        diasDisponibles[0][7] = "03/04/2019";
-        diasDisponibles[0][8] = "05/07/2019";
+        diasDisponibles[0][6] = "19/9/2020";
+        diasDisponibles[0][7] = "03/4/2019";
+        diasDisponibles[0][8] = "05/7/2019";
         diasDisponibles[0][9] = "30/11/2020";
         //Segunda especialidad
-        diasDisponibles[1][0] = "15/06/2019";
-        diasDisponibles[1][1] = "03/04/2020";
-        diasDisponibles[1][2] = "10/03/2020";
+        diasDisponibles[1][0] = "15/6/2019";
+        diasDisponibles[1][1] = "03/4/2020";
+        diasDisponibles[1][2] = "10/3/2020";
         diasDisponibles[1][3] = "20/12/2019";
         diasDisponibles[1][4] = "16/11/2020";
-        diasDisponibles[1][5] = "03/08/2019";
+        diasDisponibles[1][5] = "03/8/2019";
         diasDisponibles[1][6] = "13/11/2019";
-        diasDisponibles[1][7] = "03/04/2019";
+        diasDisponibles[1][7] = "03/4/2019";
         diasDisponibles[1][8] = "15/10/2020";
-        diasDisponibles[1][9] = "03/04/2020";
+        diasDisponibles[1][9] = "03/4/2020";
         //Tercera especialidad
         diasDisponibles[2][0] = "30/10/2019";
-        diasDisponibles[2][1] = "03/04/2020";
-        diasDisponibles[2][2] = "14/06/2020";
-        diasDisponibles[2][3] = "21/04/2019";
+        diasDisponibles[2][1] = "03/4/2020";
+        diasDisponibles[2][2] = "14/6/2020";
+        diasDisponibles[2][3] = "21/4/2019";
         diasDisponibles[2][4] = "16/11/2019";
         diasDisponibles[2][5] = "16/10/2019";
-        diasDisponibles[2][6] = "28/09/2019";
-        diasDisponibles[2][7] = "21/07/2019";
+        diasDisponibles[2][6] = "28/9/2019";
+        diasDisponibles[2][7] = "21/7/2019";
         diasDisponibles[2][8] = "27/11/2020";
-        diasDisponibles[2][9] = "02/04/2019";
+        diasDisponibles[2][9] = "02/4/2019";
         //Cuarta especialidad
-        diasDisponibles[3][0] = "05/06/2019";
-        diasDisponibles[3][1] = "13/04/2020";
+        diasDisponibles[3][0] = "05/6/2019";
+        diasDisponibles[3][1] = "13/4/2020";
         diasDisponibles[3][2] = "10/11/2019";
-        diasDisponibles[3][3] = "03/09/2019";
+        diasDisponibles[3][3] = "03/9/2019";
         diasDisponibles[3][4] = "12/11/2020";
-        diasDisponibles[3][5] = "06/03/2019";
-        diasDisponibles[3][6] = "26/09/2020";
-        diasDisponibles[3][7] = "24/07/2019";
+        diasDisponibles[3][5] = "06/3/2019";
+        diasDisponibles[3][6] = "26/9/2020";
+        diasDisponibles[3][7] = "24/7/2019";
         diasDisponibles[3][8] = "22/10/2020";
-        diasDisponibles[3][9] = "03/04/2020";
+        diasDisponibles[3][9] = "03/4/2020";
 
         // rellenar matriz de booleanos para la tabla de fechas
         diasDisponiblesActivos = new boolean[NUM_ESPECIALIDADES][NUM_FECHAS_POR_ESPECIALIDAD];

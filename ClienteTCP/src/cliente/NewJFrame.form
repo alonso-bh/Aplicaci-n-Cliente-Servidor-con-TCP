@@ -38,7 +38,7 @@
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabel1" min="-2" pref="285" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -89,7 +89,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Interfaz de gesti&#xf3;n de citas m&#xe9;dicas"/>
+        <Property name="text" type="java.lang.String" value="INTERFAZ DE GESTI&#xd3;N DE CITAS M&#xc9;DICAS"/>
       </Properties>
     </Component>
   </SubComponents>

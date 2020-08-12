@@ -152,8 +152,8 @@ public class SolicitarCita extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(jLabel9)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(menuEspecialidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(menuEspecialidades, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -178,6 +178,8 @@ public class SolicitarCita extends javax.swing.JFrame {
         
         if (todo_ok){ // formar la cadena de String para mandarla al servidor
             String cad = new String();
+            
+            // adaptar el número de mes para la comprobación por parte del server: enero = 1 ==>>> 01 (el server no entiende el 01
 
             cad += jCalen.getCalendar().get(Calendar.DAY_OF_MONTH) + "/"
                 +  (jCalen.getCalendar().get(Calendar.MONTH)+1) + "/" 
